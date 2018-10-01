@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>my paint</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  </head>
+  <body style='margin : 0'>
+        <div id="menu">
+            <button id="divide" class="btn btn-primary" type="button" value="divide">divide</button>
+            <h4>the thiknnes</h4>
+            <select id="thickness">
+              <option value='1'>thinner</option>
+              <option value="3">thin</option>
+              <option value="5">thick</option>
+              <option value="8">thicker</option>
+            </select>
+            <h4>color</h4>
+            <input id='color' type="color"><br>
+            <h5>upload an image</h5>
+            <input type="file" id="file_input" accept="image/x-png,image/gif,image/jpeg" hidden="hidden">
+            <label class="btn btn-primary" for="file_input"><i class="fas fa-images fa-2x"></i></label><br>
+            <input id="cryon" checked type="radio" name="choose" value="cryon" hidden="hidden">
+            <label class="btn btn-primary" for="cryon"><i class="fas fa-pencil-alt fa-2x"></i></label>
+            <input id="line" type="radio" name="choose" value="line" hidden="hidden">
+            <label class="btn btn-primary" for="line"><i class="fas fa-align-center fa-2x"></i></label>
+            <input id="rec" type="radio" name="choose" value="rec" hidden="hidden">
+            <label class="btn btn-primary" for="rec"><i class="far fa-square fa-2x"></i></label>
+            <select id='recValue'>
+              <option value="fill">fill</option>
+              <option value="stroke">stroke</option>
+            </select>
+            <input id="circle" type="radio" name="choose" value="circle" hidden="hidden">
+            <label class="btn btn-primary" for="circle"><i class="far fa-circle fa-2x"></i></label>
+            <select id='circleValue'>
+              <option value="fill">fill</option>
+              <option value="stroke">stroke</option>
+            </select>
+            <input id="rubber" type="radio" name="choose" value="rubber" hidden="hidden">
+            <label class="btn btn-primary" for="rubber"><i class="fas fa-eraser fa-2x"></i></label>
+            <a id="download" class="btn btn-success" download="image.png">Download</a>
+        </div>
+        <div class = "canvass">
+          <canvas id="canvas" class="canvas"></canvas>
+        </div>
+  </body>
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>
